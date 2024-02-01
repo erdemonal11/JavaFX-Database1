@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db_browser.MainController">
+   <top>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnConnect" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Connect" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnAddNew" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Add New" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnUpdateSelected" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Update Selected" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDeleteSelected" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Delete Selected" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCustomQuery" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Custom Query" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="220.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="438.0" prefWidth="138.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblTables" alignment="CENTER" text="List of Tables" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </Label>
+            <ListView fx:id="lwTables" prefHeight="418.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="twData" prefHeight="438.0" prefWidth="662.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="25.0" top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
